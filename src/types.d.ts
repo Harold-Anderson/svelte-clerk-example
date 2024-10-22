@@ -1,0 +1,1 @@
+/// <reference types="svelte-clerk/env" />

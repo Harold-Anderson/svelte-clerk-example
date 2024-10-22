@@ -1,8 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 	import type { LayoutData } from './$types';
-	import { ClerkProvider,SignIn } from 'svelte-clerk';
-	import { createClerkClient } from '@clerk/backend';
+	import { ClerkProvider, SignIn } from 'svelte-clerk';
 	import { PUBLIC_CLERK_PUBLISHABLE_KEY } from '$env/static/public';
 
 	const {
@@ -14,11 +13,7 @@
 	} = $props();
 </script>
 
-<!-- ... -->
-<p>
-<SignIn />
-</p>
-
-
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<ClerkProvider {...data} publishableKey={PUBLIC_CLERK_PUBLISHABLE_KEY}>
+	{@render children()}
+	<SignIn />
+</ClerkProvider>

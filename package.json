@@ -20,6 +20,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@clerk/backend": "^1.14.1",
 		"@sveltejs/adapter-node": "^5.2.8",
 		"svelte-clerk": "^0.3.0"
 	}
