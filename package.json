@@ -21,6 +21,7 @@
 	"type": "module",
 	"dependencies": {
 		"@clerk/backend": "^1.14.1",
+		"@sveltejs/adapter-cloudflare": "^4.7.3",
 		"@sveltejs/adapter-node": "^5.2.8",
 		"@tsconfig/svelte": "^5.0.4",
 		"@types/node": "^22.7.8",
