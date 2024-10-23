@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Snippet } from 'svelte';
+	import type { Snippet } from "svelte";
 	import type { LayoutData } from './$types';
 	import { ClerkProvider, SignIn } from 'svelte-clerk';
 	import { PUBLIC_CLERK_PUBLISHABLE_KEY } from '$env/static/public';

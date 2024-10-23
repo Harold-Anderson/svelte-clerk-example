@@ -1,6 +1,13 @@
+import { defineConfig, loadEnv } from 'vite';
 import { sveltekit } from '@sveltejs/kit/vite';
-import { defineConfig } from 'vite';
 
-export default defineConfig({
-	plugins: [sveltekit()]
+export default defineConfig(({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '');
+  
+  return {
+    plugins: [sveltekit()],
+    define: {
+      'import.meta.env.PUBLIC_CLERK_PUBLISHABLE_KEY': JSON.stringify(env.PUBLIC_CLERK_PUBLISHABLE_KEY),
+    },
+  };
 });
