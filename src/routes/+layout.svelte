@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { Snippet } from "svelte";
 	import type { LayoutData } from './$types';
-	import { ClerkProvider, SignIn } from 'svelte-clerk';
+	import { ClerkProvider } from 'svelte-clerk';
 	import { PUBLIC_CLERK_PUBLISHABLE_KEY } from '$env/static/public';
 
 	const {
@@ -15,5 +15,4 @@
 
 <ClerkProvider {...data} publishableKey={PUBLIC_CLERK_PUBLISHABLE_KEY}>
 	{@render children()}
-	<SignIn />
 </ClerkProvider>
